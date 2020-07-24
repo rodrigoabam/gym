@@ -135,3 +135,40 @@ header {
 
     display: inline-block;
 }
+
+
+/* FORM */
+
+input {
+    width: 100%;
+    padding: 4px;
+
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--color-one);
+
+    outline: none;
+}
+
+input[type="radio"] {
+    width: initial;
+    margin-right: 8px;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    width: 100%;
+    margin-top: 24px;
+    padding: 8px 32px;
+    
+    color: var(--color-four);
+    background-color: var(--color-one);
+
+    font-size: 16px;
+    
+    border-radius: 4px;
+}
