@@ -44,6 +44,15 @@
       "created_at": 1595896112112,
       "gender": "M",
       "services": "Musculação"
+    },
+    {
+      "id": 6,
+      "name": "Rodrigo",
+      "avatar_url": "https://www.google.com.br/",
+      "birth": 320371200000,
+      "created_at": 1595985391966,
+      "gender": "M",
+      "services": "Muscução"
     }
   ]
 }
