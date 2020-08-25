@@ -1,19 +1,10 @@
 {
   "instructors": [
     {
-      "id": 1,
-      "name": "rodrigo de almeida barbosa",
-      "avatar_url": "https://blog.unicep.edu.br/wp-content/uploads/2019/07/qual-a-importancia-do-professor-na-formacao-do-aluno-935x614.jpg",
-      "birth": 667526400000,
-      "created_at": 1595564206795,
-      "gender": "M",
-      "services": "Musculação"
-    },
-    {
-      "id": 2,
-      "name": "Aline",
+      "id": "2",
+      "name": "Aline Vas",
       "avatar_url": "https://i2.wp.com/direcionalescolas.com.br/wp-content/uploads/2017/10/Do-professor-de-antes-ao-educador-atual.jpg?fit=550%2C327&ssl=1",
-      "birth": 826502400000,
+      "birth": 952732800000,
       "created_at": 1595885584941,
       "gender": "F",
       "services": "Natação"
