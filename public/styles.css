@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Varta:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
     --color-one: #DCAE1D;
@@ -20,7 +20,7 @@ a {
 
 body {
     background-color: var(--color-two);
-    font-family: 'Varta', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -186,3 +186,79 @@ a.button {
     margin-top: 8px;
     background-color: lightcoral;
 }
+
+
+/* INDEX INSTRUCTORS */
+.table-container {
+    padding: 40px;
+    display: block;
+
+    box-sizing: border-box;
+}
+
+.table-container table {
+    border-spacing: 0;
+}
+
+.table-container thead tr th {
+    text-align: left;
+}
+
+td, th {
+    padding: 16px;
+
+    color: var(--color-one);
+
+    border-bottom: solid 1px var(--color-two);
+}
+
+th {
+    text-transform: uppercase;
+    color: var(--color-two);
+    font-size: 14px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span {
+    width: 48px;
+    height: 48px;
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 50%;
+    border: solid 2px var(--color-two);
+    box-shadow: 3px 1px 6px -4px var(--color-two);
+}
+
+tbody tr td:last-child a {
+    padding: 8px 16px;
+
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-three);
+    background-color: var(--color-one);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border-radius: 4px;
+}
+
+.table-container thead tr th:last-child, td:last-child {
+    text-align: center;
+}
+
+
+/* --color-one: #DCAE1D;
+--color-two: #CAE4DB;
+--color-three: #7A9D96;
+--color-four: #00303F; */
