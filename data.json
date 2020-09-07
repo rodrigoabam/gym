@@ -1,7 +1,8 @@
 {
+  "members": [],
   "instructors": [
     {
-      "id": "2",
+      "id": 2,
       "name": "Aline Vas",
       "avatar_url": "https://i2.wp.com/direcionalescolas.com.br/wp-content/uploads/2017/10/Do-professor-de-antes-ao-educador-atual.jpg?fit=550%2C327&ssl=1",
       "birth": 952732800000,
