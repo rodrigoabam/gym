@@ -19,7 +19,25 @@ module.exports = {
         const month = `0${date.getUTCMonth()+1}`.slice(-2)
         const day = `0${date.getUTCDate()}`.slice(-2)
 
-        return `${year}-${month}-${day}`
+        return {
+            day,
+            month,
+            year,
+            birthDay: `${day}/${month}`,
+            iso: `${year}-${month}-${day}`
+        }
+    },
+    typeBlood: function(blood){
+        let typeBlood
+
+        if(blood == "A1") return typeBlood = "A+"
+        if(blood == "A2") return typeBlood = "A-"
+        if(blood == "B1") return typeBlood = "B+"
+        if(blood == "B2") return typeBlood = "B-"
+        if(blood == "AB1") return typeBlood = "AB+"
+        if(blood == "AB2") return typeBlood = "AB-"
+        if(blood == "O1") return typeBlood = "O+"
+        if(blood == "O2") return typeBlood = "O-"
     }
 }
 

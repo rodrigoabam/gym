@@ -35,7 +35,7 @@ header {
 }
 
 .links a {
-    color: var(--color-one);
+    color: var(--color-two);
     position: relative;
 }
 
@@ -44,7 +44,7 @@ header {
 }
 
 .links a.active {
-    font-weight: bold;
+    color: var(--color-one);
 }
 
 .links a:after {
@@ -139,7 +139,7 @@ header {
 
 /* FORM */
 
-input {
+input, select {
     width: 100%;
     padding: 4px;
 
@@ -240,17 +240,23 @@ tbody tr td:first-child span {
     box-shadow: 3px 1px 6px -4px var(--color-two);
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-container > a {
     padding: 8px 16px;
 
     font-size: 12px;
     font-weight: 500;
-    color: var(--color-three);
+    color: var(--color-four);
     background-color: var(--color-one);
     text-decoration: none;
     text-transform: uppercase;
 
     border-radius: 4px;
+}
+
+.table-container > a {
+    margin-bottom: 16px;
+    display: inline-block;
 }
 
 .table-container thead tr th:last-child, td:last-child {

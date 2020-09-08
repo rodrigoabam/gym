@@ -1,28 +1,11 @@
 const fs = require('fs')
 const data = require('../data.json')
 const Intl = require('intl')
-const { age, date } = require('../utils')
+const { date, typeBlood } = require('../utils')
 
 
 exports.index = function(req, res){
     return res.render("members/index", { members: data.members })
-}
-
-exports.show = function(req,res){
-    const { id } = req.params
-
-    const foundMember = data.members.find(function(member){
-        return id == member.id
-    })
-
-    if(!foundMember) return res.send("Instrutor não encontrado")
-
-    const member = {
-        ...foundMember,
-        birth: age(foundMember.birth),
-    }
-
-    return res.render("members/show", { member })
 }
 
 exports.create = function(req, res){
@@ -38,20 +21,19 @@ exports.post = function(req, res){
         }
     }
 
-    let { avatar_url, birth, gender, services, name } = req.body    
+    birth = Date.parse(req.body.birth)
 
-    birth = Date.parse(birth)
-    const id = Number(data.members.length + 1)
-    const created_at = Date.now()
+    let id = 1;
+    const lastMember = data.members[data.members.length -1]
+
+    if(lastMember) {
+        id = lastMember.id + 1
+    }
 
     data.members.push({
         id,
-        name,
-        avatar_url,
-        birth,
-        created_at,
-        gender,
-        services
+        ...req.body,
+        birth
     })
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
@@ -59,6 +41,24 @@ exports.post = function(req, res){
 
         return res.redirect(`/members/${id}`)
     })
+}
+
+exports.show = function(req,res){
+    const { id } = req.params
+
+    const foundMember = data.members.find(function(member){
+        return id == member.id
+    })
+
+    if(!foundMember) return res.send("Membro não encontrado")
+
+    const member = {
+        ...foundMember,
+        birth: date(foundMember.birth).birthDay,
+        blood: typeBlood(foundMember.blood),
+    }
+
+    return res.render("members/show", { member })
 }
 
 exports.edit = function(req,res){
@@ -72,10 +72,10 @@ exports.edit = function(req,res){
 
     const member = {
         ...foundMember,
-        birth: date(foundMember.birth)
+        birth: date(foundMember.birth).iso
     }
 
-    return res.render('members/edit', {member })
+    return res.render('members/edit', { member })
 }
 
 //atualizar
