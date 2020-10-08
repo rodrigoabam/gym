@@ -12,12 +12,12 @@ server.use(routes)
 
 server.set("view engine", "njk")
 
-nunjucks.configure("views", {
+nunjucks.configure("src/app/views", {
     express: server,
     autoescape: false,
     noCache: true
 })
 
-server.listen(5001, () => {
+server.listen(5000, () => {
     console.log("server is running")
 })
